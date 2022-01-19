@@ -3,21 +3,23 @@
 #Description: Takes input integers, until the user gives 0. Then prints the number of the negative integers.
 
 neg_number_list = []
-def converting_to_negative():
-    
-    input_number = int(input("Give me a number, please "))
-    if input_number > 0:
-        converting_to_negative()
-        
-    
-    if input_number < 0:
-        neg_number_list.append(input_number)
-        converting_to_negative()
-        
+pos_number_list = []
 
-    else:
-        count = len(neg_number_list)
-        print("There were" ,count, "negative numbers")
-                
+def counting_the_negative():
+    while True:
+        input_number = int(input("Give me a number, please "))
+        if input_number < 0:
+            neg_number_list.append(input_number)
+            continue
+            
+        if input_number > 0:
+           pos_number_list.append(input_number)
+           continue
 
-converting_to_negative()
+        else:
+            count = len(neg_number_list)
+            return print("There were" ,count, "negative numbers")
+            break
+            
+
+counting_the_negative()
