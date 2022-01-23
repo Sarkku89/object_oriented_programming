@@ -1,4 +1,4 @@
-#File name: even_numbers.py
+#File name: evenNumbers.py
 #Author: Sarianna Junnila
 #Description: Takes input integers, until the user gives 0. 
 # Then prints the number of the negative integers and counts the even numbers.

@@ -1,4 +1,4 @@
-#File name: postive_divisible_by3.py
+#File name: positiveDivisibleByThree.py
 #Author: Sarianna Junnila
 #Description: Takes input integers, until the user gives 0. 
 # Then prints the number of the negative integers and counts the even numbers.
@@ -18,7 +18,7 @@ def counting_the_sum():
 
 def counting_the_even():
     even_count = 0
-    new_list =  neg_number_list + pos_number_list
+    new_list = neg_number_list + pos_number_list
 
     for i in new_list:
         if abs(i) % 2 == 0:

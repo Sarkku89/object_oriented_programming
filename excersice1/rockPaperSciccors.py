@@ -1,6 +1,7 @@
-#File name: rock_paper_scissors.py
+#File name: rockPaperSciccors.py
 #Author: Sarianna Junnila
-#Description: A simple game of rock, paper and scissors. Player can pick one of them. First one to pick three winning tools wins.
+#Description: A simple game of rock, paper and scissors. 
+# Player can pick one of them. First one to pick three winning tools wins.
 
 import random 
 
@@ -77,6 +78,7 @@ def ro_pa_sc():
 
         if user_pick != "paper" or user_pick != "rock" or user_pick != "scissors":
             print ("Typing error. Please type your pick in small letters. \nYou can only pick rock, paper or scissors.\n")
+            continue
 
     else:
         if user_wins == 3:
