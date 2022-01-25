@@ -17,13 +17,13 @@ class Coin:
         
         if random.randint(0,4) == 0:
             self.sideup = 'is Heads'
-        if random.randint(0,4) == 1:
+        elif random.randint(0,4) == 1:
             self.sideup = 'is Tails'
-        if random.randint(0,4) == 2:
+        elif random.randint(0,4) == 2:
             self.sideup = 'is upright. Neither Heads or Tails.'
-        if random.randint(0,4) == 3:
+        elif random.randint(0,4) == 3:
             self.sideup = 'has fallen on the ground and disappeared into a rabbit hole..'
-        if random.randint(0,4) == 4:
+        else:
             self.sideup = 'defines gravity and is sucked into a wormhole in space.'
         
 

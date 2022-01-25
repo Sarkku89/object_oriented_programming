@@ -12,7 +12,7 @@ def counting_the_negative():
             neg_number_list.append(input_number)
             continue
             
-        if input_number > 0:
+        elif input_number > 0:
            pos_number_list.append(input_number)
            continue
 
