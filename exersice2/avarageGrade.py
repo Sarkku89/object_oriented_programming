@@ -13,8 +13,6 @@ def avarage_grade():
     grade_list.append(value)
     avarage = (value + avarage) / len(grade_list)
     print ("The average grade for this course is: ", avarage)
-    print (grade_table)
-    print (grade_list)
     avarage_grade()
 
 avarage_grade()

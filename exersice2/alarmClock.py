@@ -1,24 +1,37 @@
-"""Code the alarm clock, use objects.
-This is also supposed to be a simple task, so do not makeit unnecessarily complicated. 
-Alarm can simply be a text output on screen. 
-No sounds are needed (can be added if you wish).
-If this is too difficult, code a timer instead.
-"""
+#File name: alarmClock.py
+#Author: Sarianna Junnila
+#Description: Super simple alarm clock with objects.
+
 import time
-import tkinter
 
 
 class AlarmClock:
-    def __init__(self, main_window):
-        self.main_window = main_window
-        self.clock_label = tkinter.Label(self.main_window, font = ('arial', 80), bg = 'black', fg='red')
-        self.display_time()
-
-    def display_time(self):
+    def __init__(self):
+        self.alarm_hours = int(input("Give the hours for alarm (HH): "))
+        self.alarm_minutes = int(input("Give the minutes for alarm (MM): "))
+        self.alarm_seconds = int(input("Give the seconds for alarm (SS): "))
         self.time_now = time.strftime('%H:%M:%S')
-        self.clock_label = self.time_now
-        self.main_window.after(200, self.display_time)
+        
+    def alarm(self):
 
-main_window = tkinter.Tk()
-my_alarm_clock = AlarmClock(main_window)
-main_window.mainloop()
+        while True:
+            time.sleep(1)
+            self.time_now = time.strftime('%H:%M:%S')
+            self.hours = int(self.time_now[0:2])
+            self.minutes = int(self.time_now[3:5])
+            self.seconds = int(self.time_now[6:8])
+            print (time.strftime('%H:%M:%S') )
+            if self.hours == self.alarm_hours:
+                if self.minutes == self.alarm_minutes:
+                    if self.seconds == self.alarm_seconds:
+                        print ("Time to wake up!")
+                        break
+               
+           
+def main():
+    my_alarm = AlarmClock()
+    my_alarm.alarm()
+    
+
+main()
+    
