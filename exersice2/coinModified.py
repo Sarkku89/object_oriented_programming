@@ -12,7 +12,6 @@ class Coin:
     def __init__(self):
         self.sideup = 'Heads'
 
-
     def toss_the_coin(self):
         
         if random.randint(0,4) == 0:
@@ -26,7 +25,6 @@ class Coin:
         else:
             self.sideup = 'defines gravity and is sucked into a wormhole in space.'
         
-
     def get_sideup(self):
         return self.sideup
 
@@ -35,14 +33,10 @@ class Coin:
 def main():
 
     my_coin = Coin()
-
     print("The coin is", my_coin.get_sideup())
-
     print("Tossing the coin...")
     my_coin.toss_the_coin()
-
     print("Now the coin", my_coin.get_sideup())
-
 
 # Calling the main function
 main()
