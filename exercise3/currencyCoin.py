@@ -1,0 +1,63 @@
+# File:         coinModified.py
+# Source:       Tony Gaddis: Starting out with Python, fourth edition
+# Modified by:  Sanna Maatta & Anne Jumppanen
+# Modified further by: Sarianna Junnila
+# Description:  Coin object and tossing. Added new options for the possible result.
+
+import random
+
+# Class definition
+
+class Coin:
+    def __init__(self):
+        self.__sideup = 'Heads'
+        self.currency = 'Euro'
+
+    def toss_the_coin(self):
+        
+        if random.randint(0,4) == 0:
+            self.__sideup = 'is Heads'
+        elif random.randint(0,4) == 1:
+            self.__sideup = 'is Tails'
+        elif random.randint(0,4) == 2:
+            self.__sideup = 'is upright. Neither Heads or Tails.'
+        elif random.randint(0,4) == 3:
+            self.__sideup = 'has fallen on the ground and disappeared into a rabbit hole..'
+        else:
+            self.__sideup = 'defines gravity and is sucked into a wormhole in space.'
+
+    def check_the_currency(self):
+        
+        if random.randint(0,4) == 0:
+            self.currency = 'is Euro'
+        elif random.randint(0,4) == 1:
+            self.currency = 'is Pound'
+        elif random.randint(0,4) == 2:
+            self.currency = 'is Dollar'
+        elif random.randint(0,4) == 3:
+            self.currency = 'is Yen'
+        else:
+            self.currency = 'is Rubble'
+        
+    def get_sideup(self):
+        return self.__sideup
+
+    def get_currency (self):
+        return self.currency
+
+# Main function definition
+
+def main():
+
+    my_coin = Coin()
+    my_coin.__sideup = 'Upright'
+    print("The coin is", my_coin.get_sideup(), ". It's currency is", my_coin.get_currency())
+    print("Tossing the coin...")
+    my_coin.toss_the_coin()
+    print("Now the coin", my_coin.get_sideup())
+    my_coin.check_the_currency()
+    print("Now the currency ", my_coin.get_currency())
+    
+
+# Calling the main function
+main()

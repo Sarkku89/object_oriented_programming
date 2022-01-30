@@ -27,7 +27,7 @@ class AlarmClock:
                     print ("Time to wake up!")
                     snoozing = input("You want to sleep 5 minutes longer? y/n ")
                     if snoozing == "y":
-                        self.alarm_minutes += 1
+                        self.alarm_minutes += 5
                         continue
                     else:                    
                         break
