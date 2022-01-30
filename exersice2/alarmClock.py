@@ -10,7 +10,8 @@ class AlarmClock:
     def __init__(self, alarm_hours, alarm_minutes, time_now):
         self.alarm_hours = alarm_hours
         self.alarm_minutes = alarm_minutes
-        self.time_now = time_now
+        self._time_now = time_now
+
 
 # Slicing the current time string and comparing it to the alarm time every 1 second
 
@@ -24,7 +25,13 @@ class AlarmClock:
             if self.hours == self.alarm_hours:
                 if self.minutes == self.alarm_minutes:
                     print ("Time to wake up!")
-                    break
+                    snoozing = input("You want to sleep 5 minutes longer? y/n ")
+                    if snoozing == "y":
+                        self.alarm_minutes += 1
+                        continue
+                    else:                    
+                        break
+
 
 # Main function defines the attributes for the instance 
                   
