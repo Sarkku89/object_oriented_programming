@@ -2,7 +2,6 @@
 # Author: Sarianna Junnila
 # Description:  
 
-from msilib.schema import ServiceControl
 import random
 
 # Class definition 
@@ -107,7 +106,7 @@ def play_the_game():
         first_player_roll = first_player()
         print ("Second round: First player gets:", first_player_roll)
         second_player_roll = second_player()
-        print ("Second round: The Second player gets:", second_player_roll)
+        print ("Second round: Second player gets:", second_player_roll)
         while True:
             if first_player_roll > second_player_roll:
                 print ("The First player won the game!")
@@ -120,7 +119,7 @@ def play_the_game():
                 first_player_roll = first_player()
                 print ("Second round: First player gets:", first_player_roll)
                 second_player_roll = second_player()
-                print ("Second round: The Second player gets:", second_player_roll)
+                print ("Second round: Second player gets:", second_player_roll)
 
 
 
@@ -145,7 +144,7 @@ def play_the_game():
             if second_player_roll == third_player_roll:
                 print ("Tie! Roll again!")
                 second_player_roll = second_player()
-                print ("Second round: The Second player gets:", second_player_roll)
+                print ("Second round: Second player gets:", second_player_roll)
                 third_player_roll = third_player()
                 print ("Second round: Third player gets:", third_player_roll)
 
@@ -239,7 +238,7 @@ def play_the_game():
                         if second_player_roll == third_player_roll:
                             print ("Tie! Roll again!")
                             second_player_roll = second_player()
-                            print ("Second round: The Second player gets:", second_player_roll)
+                            print ("Second round: Second player gets:", second_player_roll)
                             third_player_roll = third_player()
                             print ("Second round: Third player gets:", third_player_roll)
 
@@ -282,7 +281,7 @@ def play_the_game():
                 
                 # Second round with Second and Third player
                     second_player_roll = second_player()
-                    print ("Second round: The Second player gets:", second_player_roll)
+                    print ("Second round: Second player gets:", second_player_roll)
                     third_player_roll = third_player()
                     print ("Second round: Third player gets:", third_player_roll)
 
@@ -296,7 +295,7 @@ def play_the_game():
                         if second_player_roll == third_player_roll:
                             print ("Tie! Roll again!")
                             second_player_roll = second_player()
-                            print ("Second round: The Second player gets:", second_player_roll)
+                            print ("Second round: Second player gets:", second_player_roll)
                             third_player_roll = third_player()
                             print ("Second round: Third player gets:", third_player_roll)
             
@@ -345,6 +344,7 @@ def play_the_game():
                     print ("Second round: Third player gets:", third_player_roll)
 
                     while first_player_roll > second_player_roll or second_player_roll > first_player_roll:
+
                         if first_player_roll > third_player_roll:
                             print ("The First player won the game!")
                             break
@@ -361,5 +361,5 @@ def play_the_game():
 
 
 play_the_game()
-# Ties in the first round:
+
     
