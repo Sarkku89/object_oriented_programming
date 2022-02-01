@@ -1,6 +1,6 @@
 # File:         dice.py
 # Author: Sarianna Junnila
-# Description:  
+# Description: A dice game with three players, one dice and two rounds. 
 
 import random
 

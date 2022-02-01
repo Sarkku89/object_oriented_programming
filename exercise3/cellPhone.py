@@ -1,28 +1,7 @@
-# File:         cellPhone.py
+# File:   cellPhone.py
 # Author: Sarianna Junnila
-# Description:  
-
-"""Design first using pseudocode, then code this: Create a CellPhone Class. Write a
-program for a class that represents a cell phone. The data attributes are manufact
-(Manufacter), model (Model) and retail_price (Retail price). The class will also have the
-following methods:
-• __init__
-• set manufact
-• set model
-• set retail price
-• get manufact
-• get model
-• get retail price
-Test your CellPhone Class by writing a main function that creates the needed objects
-and prompts the user for the phone's manufacturer, model and retail price. Program
-output with data that the user enter:
-• Enter the manufacturer: Apple
-• Enter the model number: 'iPhone7
-• Enter the retail price: 500
-• Here is the data that you provided :
-• Manufacturer: Apple
-• Model number: iPhone 7
-• Retail price: 500.0"""
+# Description:  Takes user's input of phone's features as set them as 
+#   attributes and then gets the information and outputs it to the user.
 
 
 class cellPhone:
@@ -32,14 +11,14 @@ class cellPhone:
         self.retail_price = retail_price
 
 
-    def set_manufact(self):
-        self.manufact = input("Enter the manufacturer: ")
+    def set_manufact(self, manufact):
+        self.manufact = manufact
 
-    def set_model(self):
-        self.model = input ("Enter the model number: ")
+    def set_model(self, model):
+        self.model = model
 
-    def set_retail_price(self):
-        self.retail_price = float(input("Enter the retail price:"))
+    def set_retail_price(self, retail_price):
+        self.retail_price = retail_price
 
 
     def get_manufact(self):
