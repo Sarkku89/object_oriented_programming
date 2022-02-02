@@ -363,3 +363,4 @@ def play_the_game():
 play_the_game()
 
     
+# Käytä erillisiä metodeja toistuville osioille ja käytä parametrejä niille
