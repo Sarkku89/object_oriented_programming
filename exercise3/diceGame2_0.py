@@ -28,7 +28,7 @@ class Dice:
         else:
             self.result = 6
 
-# Method for getting the result¨
+# Method for getting the result
 
     def get_result(self):
         return self.result
