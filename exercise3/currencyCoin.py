@@ -11,7 +11,7 @@ import random
 class Coin:
     def __init__(self):
         self.__sideup = 'Heads'
-        self.currency = 'Euro'
+        self.currency = currency
 
     def toss_the_coin(self):
         
@@ -38,6 +38,10 @@ class Coin:
             self.currency = 'is Yen'
         else:
             self.currency = 'is Rubble'
+
+    def set_currency(self, currency):
+        self.currency = currency
+
         
     def get_sideup(self):
         return self.__sideup
