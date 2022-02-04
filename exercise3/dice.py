@@ -1,7 +1,7 @@
 # File:         dice.py
 # Author: Sarianna Junnila
-# Description:  
-
+# Description:  Class "Dice" which has three attributes: result, color and flashing_light. 
+#   All the attributes are randomly picked. 
 import random
 
 # Class definition 
@@ -12,6 +12,7 @@ class Dice:
         self.color = 'Red'
         self.flashing_light = True
 
+# Generating the result and color randomly
     def roll_the_dice(self):
         
         if random.randint(0,6) == 0:
@@ -33,18 +34,27 @@ class Dice:
             self.color = "is Brown"
             self.result = 6
 
+# Generating the flashing light with true or false.
+
     def is_it_flashing(self):
         
         if random.randint(0,2) == 0:
             self.flashing_light = True
         else:
             self.flashing_light = False
-        
+
+# The accessor method of the result attribute
+
     def get_result(self):
         return self.result
     
+ # The accessor method of the result attribute
+    
     def get_color(self):
         return self.color
+
+
+# The accessor method of the result attribute
 
     def get_flashing_light(self):
         if self.flashing_light == True:
@@ -52,17 +62,28 @@ class Dice:
         else:
             return ("The dice is not flashing.")
 
-# Main function definition
+
+# Two dice objects
 
 def first_player():
 
     first_player = Dice()
-    print("Rolling the dice...\n")
     first_player.roll_the_dice()
-    first_player.is_it_flashing()
-    print("The side with the number", first_player.get_result(), "is up and the background color", first_player.get_color())
-    print (first_player.get_flashing_light())
+    return first_player.get_result()
     
 
-# Calling the main function
-first_player()
+def second_player():
+    second_player = Dice()
+    second_player.roll_the_dice()
+    return second_player.get_result()
+
+
+def main():
+    a= first_player()
+    b= second_player()
+    print("Rolling the dice...\n")
+    print ("The First player got: ", a)
+    print ("The Seconf player got: ", b)
+    print ("The sum of the throws is", a + b )
+
+main()

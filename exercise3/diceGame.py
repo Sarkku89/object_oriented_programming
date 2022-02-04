@@ -1,6 +1,10 @@
 # File:         dice.py
 # Author: Sarianna Junnila
 # Description: A dice game with three players, one dice and two rounds. 
+#   In the first round two of the highest numbers will go through,
+#   and if there two of the same lower number, they will roll again
+#   In the Round 2, the player with higher number wins 
+#   and in a tie they roll again, until one gets a bigger number.
 
 import random
 
@@ -9,81 +13,50 @@ import random
 class Dice:
     def __init__(self):
         self.result = 1
-        self.color = 'Red'
-        self.flashing_light = True
 
     def roll_the_dice(self):
         
         if random.randint(0,6) == 0:
-            self.color = "is Red"
             self.result = 1
         elif random.randint(0,6) == 1:
-            self.color = "is Blue"
             self.result = 2
         elif random.randint(0,6) == 2:
-            self.color = "is Yellow"
             self.result = 3
         elif random.randint(0,6) == 3:
-            self.color = "is Orange"
             self.result = 4
         elif random.randint(0,6) == 4:
-            self.color = "is Green"
             self.result = 5
         else:
-            self.color = "is Brown"
             self.result = 6
 
-    def is_it_flashing(self):
-        
-        if random.randint(0,2) == 0:
-            self.flashing_light = True
-        else:
-            self.flashing_light = False
-        
+# Accessor method for the result
+#       
     def get_result(self):
         return self.result
+
     
-    def get_color(self):
-        return self.color
-
-    def get_flashing_light(self):
-        if self.flashing_light == True:
-            return ("The lights in the dice is flashing wildy.")
-        else:
-            return ("The dice is not flashing.")
-
-# Main function definition
+# ---- Three player objects ----
 
 def first_player():
 
     first_player = Dice()
-    #print("Rolling the dice...\n")
     first_player.roll_the_dice()
-    #first_player.is_it_flashing()
-    #print("The side with the number", first_player.get_result(), "is up and the background color", first_player.get_color())
-    #print (first_player.get_flashing_light())
     return first_player.get_result()
     
 def second_player():
 
     second_player = Dice()
-    #print("Rolling the dice...\n")
     second_player.roll_the_dice()
-    #second_player.is_it_flashing()
-    #print("The side with the number", second_player.get_result(), "is up and the background color", second_player.get_color())
-    #print (second_player.get_flashing_light())
     return second_player.get_result()
     
 def third_player():
 
     third_player = Dice()
-    #print("Rolling the dice...\n")
     third_player.roll_the_dice()
-    #third_player.is_it_flashing()
-    #print("The side with the number", third_player.get_result(), "is up and the background color", third_player.get_color())
-    #print (third_player.get_flashing_light())
     return third_player.get_result()
 
+
+# ---- The game function ----
 
 def play_the_game():
     first_player_roll = int(first_player())

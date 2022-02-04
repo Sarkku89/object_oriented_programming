@@ -1,6 +1,10 @@
-# File:         dice.py
+# File:         diceGame2_0.py
 # Author: Sarianna Junnila
 # Description: A dice game with three players, one dice and two rounds. 
+#   In the first round two of the highest numbers will go through,
+#   and if there two of the same lower number, they will roll again
+#   In the Round 2, the player with higher number wins 
+#   and in a tie they roll again, until one gets a bigger number.
 
 import random
 
@@ -111,9 +115,11 @@ def play_the_game():
             if a > b:
                 print ("Second player is played out! First and Third player go to Round 2!\n")
                 first_vs_third()
+                break
             if b > a:
                 print ("First player is played out! Second and Third player go to Round 2!\n")
                 second_vs_third()
+                break
             if a == b:
                 print ("Tie! Roll again!")
                 a = first_player()
@@ -129,9 +135,11 @@ def play_the_game():
             if a > b:
                 print ("Third player is played out! First and Second player go to Round 2!\n")
                 first_vs_second()
+                break
             if b > a:
                 print ("First player is played out! Second and Third player go to Round 2!\n")
                 second_vs_third()
+                break
             if a == b:
                 print ("Tie! Roll again!")
                 a = first_player()
@@ -147,9 +155,11 @@ def play_the_game():
             if a > b:
                 print ("Third player is played out! First and Second player go to Round 2!\n")
                 first_vs_second()
+                break
             if b > a:
                 print ("Second player is played out! First and Third player go to Round 2!\n")
                 first_vs_third()
+                break
             if a == b:
                 print ("Tie! Roll again!")
                 a = second_player()

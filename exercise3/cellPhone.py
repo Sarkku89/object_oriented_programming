@@ -3,6 +3,7 @@
 # Description:  Takes user's input of phone's features as set them as 
 #   attributes and then gets the information and outputs it to the user.
 
+# Class definition
 
 class cellPhone:
     def __init__(self, manufact, model, retail_price):
@@ -10,6 +11,7 @@ class cellPhone:
         self.model = model
         self.retail_price = retail_price
 
+# Mutator methods
 
     def set_manufact(self, manufact):
         self.manufact = manufact
@@ -20,7 +22,7 @@ class cellPhone:
     def set_retail_price(self, retail_price):
         self.retail_price = retail_price
 
-
+# Accessor methods
     def get_manufact(self):
         return self.manufact
 
@@ -30,7 +32,8 @@ class cellPhone:
     def get_retail_price(self):
         return self.retail_price
         
-        
+# Main function definition
+   
 def main():
     my_cell_phone = cellPhone(
     manufact = input("Enter the manufacturer: "),

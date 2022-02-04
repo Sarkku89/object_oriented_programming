@@ -10,21 +10,21 @@ import random
 
 class Coin:
     def __init__(self):
-        self.__sideup = 'Heads'
-        self.currency = currency
+        self.sideup = 'Heads'
+        #self.currency = currency
 
     def toss_the_coin(self):
         
         if random.randint(0,4) == 0:
-            self.__sideup = 'is Heads'
+            self.sideup = 'is Heads'
         elif random.randint(0,4) == 1:
-            self.__sideup = 'is Tails'
+            self.sideup = 'is Tails'
         elif random.randint(0,4) == 2:
-            self.__sideup = 'is upright. Neither Heads or Tails.'
+            self.sideup = 'is upright. Neither Heads or Tails.'
         elif random.randint(0,4) == 3:
-            self.__sideup = 'has fallen on the ground and disappeared into a rabbit hole..'
+            self.sideup = 'has fallen on the ground and disappeared into a rabbit hole..'
         else:
-            self.__sideup = 'defines gravity and is sucked into a wormhole in space.'
+            self.sideup = 'defines gravity and is sucked into a wormhole in space.'
 
     def check_the_currency(self):
         
@@ -39,12 +39,12 @@ class Coin:
         else:
             self.currency = 'is Rubble'
 
-    def set_currency(self, currency):
-        self.currency = currency
+    #def set_currency(self, currency):
+        #self.currency = currency
 
         
     def get_sideup(self):
-        return self.__sideup
+        return self.sideup
 
     def get_currency (self):
         return self.currency
@@ -54,7 +54,8 @@ class Coin:
 def main():
 
     my_coin = Coin()
-    my_coin.__sideup = 'Upright'
+    my_coin.currency = 'Euro'
+
     print("The coin is", my_coin.get_sideup(), ". It's currency is", my_coin.get_currency())
     print("Tossing the coin...")
     my_coin.toss_the_coin()

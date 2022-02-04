@@ -1,10 +1,15 @@
-# File:         dice.py
+# File:         diceGame3.py
 # Author: Sarianna Junnila
 # Description: A dice game with three players, one dice and two rounds. 
+#   In the first round two of the highest numbers will go through,
+#   and if there two of the same lower number and same color dice, they will roll again
+#   If only one of the players in tie gets Blue dice, she/he will go to next round.
+#   In the Round 2, the player with higher number wins 
+#   and in a tie, if only one has a Blue dice she/he will win even with the same number.
 
 import random
 
-# Class definition 
+# ---- Class definition ----
 
 class Dice:
     def __init__(self):
@@ -46,7 +51,7 @@ class Dice:
 
 
 
-# Instances for the class (three different players)
+# ---- Instances for the class (three different players) ----
 
 def first_player():
 
@@ -75,8 +80,6 @@ def third_player():
     dice_color = third_player.get_color()
     third_player_res = int(third_player.get_result())
     return third_player_res, dice_color
-
-
 
 
 # ---- Funtion for the game play ----
@@ -128,6 +131,7 @@ def play_the_game():
             print ("All players rolled the same number and have the same color dice! Rematch!\n")
             play_the_game()
 
+        # If First and Second player get a "lower" tie in first round
         elif first_color == second_color:
             if first_color == second_color == "Blue":
                 print ("All players got the same number. The players with Blue dices win the round! Sorry Third player, you are out!\n")
@@ -141,8 +145,10 @@ def play_the_game():
                 second_color = second_player()[1]
                 print ("First player got", first_player_res)
                 print ("Second player got", second_player_res, "\n")
-                tie_with_colors_fs()
+                tie_with_colors_fs(first_player_res, second_player_res, first_color, second_color)
 
+
+        # If First and Third player get a "lower" tie in first round
         elif first_color == third_color:
             if first_color == third_color == "Blue":
                 print ("All players got the same number. The players with Blue dices win the round! Sorry Second player, you are out!\n")
@@ -156,8 +162,10 @@ def play_the_game():
                 third_color = third_player()[1]
                 print ("First player got", first_player_res)
                 print ("Third player got", third_player_res, "\n")
-                tie_with_colors_ft()
+                tie_with_colors_ft(first_player_res, third_player_res, first_color, third_color)
 
+       
+        # If Second and Third player get a "lower" tie in first round
         elif second_color == third_color:
             if second_color == third_color == "Blue":
                 print ("All players got the same number. The players with Blue dices win the round! Sorry First player, you are out!\n")
@@ -171,14 +179,15 @@ def play_the_game():
                 third_color = third_player()[1]
                 print ("Second player got", second_player_res)
                 print ("Third player got", third_player_res, "\n")
-                tie_with_color_st()        
+                tie_with_color_st(second_player_res, third_player_res, second_color, third_color)        
 
 
-
+        # If all players get same number but only First and Third player have Blue dice
         elif first_color == third_color == "Blue":
             print ("All players got the same number. The players with blue dices win the round! Sorry Second player, you are out!")
             first_vs_third()
 
+        # If all players get same number but only First and Third player have Blue dice
         elif second_color == third_color == "Blue":
             print ("All players got the same number. The players with blue dices win the round! Sorry First player, you are out!")
             second_vs_third()
@@ -202,7 +211,7 @@ def play_the_game():
                 second_color = second_player()[1]
                 print ("First player got", first_player_res)
                 print ("Second player got", second_player_res, "\n")
-                tie_with_colors_fs()
+                tie_with_colors_fs(first_player_res, second_player_res, first_color, second_color)
                 
         else:
             print ("A tie between First and Second player. Please roll again!\n")
@@ -244,7 +253,7 @@ def play_the_game():
                 third_color = third_player()[1]
                 print ("First player got", first_player_res)
                 print ("Third player got", third_player_res, "\n")
-                tie_with_colors_ft()
+                tie_with_colors_ft(first_player_res, third_player_res, first_color, third_color)
 
         else:
             print ("A tie between First and Third player. Please roll again!\n")
@@ -286,7 +295,7 @@ def play_the_game():
                 third_color = third_player()[1]
                 print ("Second player got", second_player_res)
                 print ("Third player got", third_player_res, "\n")
-                tie_with_color_st()   
+                tie_with_color_st(second_player_res, third_player_res, second_color, third_color)   
 
         else:
             print ("A tie between Second and Third player. Please roll again!\n")
@@ -313,7 +322,7 @@ def play_the_game():
 
     #Tie with Second and Third player
 
-def tie_with_color_st():
+def tie_with_color_st(second_player_res, third_player_res, second_color, third_color):
     while True:
         if second_player_res > third_player_res:
             print ("Second player will join First player in the Round 2\n")
@@ -342,7 +351,7 @@ def tie_with_color_st():
 
     # Tie with First and Third player
 
-def tie_with_colors_ft():
+def tie_with_colors_ft(first_player_res, third_player_res, first_color, third_color):
     while True:
         if first_player_res > third_player_res:
             print ("First player will join Second player in the Round 2\n")
@@ -371,7 +380,7 @@ def tie_with_colors_ft():
 
     #Tie with First and Second player
 
-def tie_with_colors_fs():
+def tie_with_colors_fs(first_player_res, second_player_res, first_color, second_color):
     while True:
         if first_player_res > second_player_res:
             print ("First player will join Third player in the Round 2\n")
