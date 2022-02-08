@@ -1,0 +1,29 @@
+class cellPhone:
+	def initializing the attributes of the class:
+		self.manufact = manufact
+		self.model = model
+		self.retail_price = retail_price
+
+	def mutator method for manufactor:
+		self.manufact = manufact
+
+	def same for model
+
+	def same for retail_price
+
+
+	def accessor method for manufactor:
+		return self.manufact
+
+	def same for model
+
+	def same for retail_price
+
+def main function:
+	objectname = cellPhone(
+    assigning input from user to manufact,
+    same for model,
+    same for retail_price)
+    
+	printing the output for the user
+	all the attributes separately

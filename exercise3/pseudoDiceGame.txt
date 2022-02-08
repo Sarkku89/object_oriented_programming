@@ -1,0 +1,107 @@
+import random
+
+class Dice:
+    def initializing the attributes of the class:
+        self.result = giving a value for result
+
+    def function for rolling the dice
+        
+        if random radiant between 0-6 is 0:
+            result is 1
+        elif if radint is 1:
+            result is 2
+            .
+        --- all the dice's sides according to randint as elifs----
+            .
+        else:
+            last result
+
+
+    def accessor method for getting the result
+        return result
+
+
+def first player instance
+
+    assigning class Dice to the object
+    call the rolling dice function with this object
+    print the result with calling the accessor methods with this object
+    
+... the same for player 2 and 3
+    
+    
+def the actual game function
+    assigning the first player result by calling the firsta player instance
+    same for two
+    same for three
+    print the result for first player
+    same for two
+    same for three
+
+    if first and second player result is bigger than third:
+        print the situation
+        call for function "first vs second"
+
+    elif first and third player result are bigger than second:
+        print the situation
+        call for function "first vs third"
+
+    elif... for all clear winner possibilities
+
+    elif if all are in a tie
+        print the situation
+        call the game function for restart
+
+    elif if tie between first and Second
+        print situation
+        assign first player instance in a variable
+        same for Second
+        
+        while True:
+            if first is bigger than second
+                print the situation
+                call for first vs third function
+                break
+            if first smaller than second
+                print situation
+                call for second vs third
+            if its a tie
+                print situation
+                call the player funtions again
+    
+    elif same for first and third
+    ....
+    elif same for second and third
+    ....
+
+
+def function for first vs third for second Round
+    assigning a variable by calling the first player object
+    assigning a variable by calling the third player object
+    assigning a variable for player name for first player as a string
+    assigning a variable for player name for thied player as a string
+    calling function for second Round with above variables as parameters
+
+def same for first vs second player
+...
+def same for second vs third player
+...
+
+
+def function for the second round
+    print player name and result
+    print player name and result
+    if player is bigger than the other player
+        print the Winner name
+    elif player is smaller than the other player
+        print the Winner name
+    elif players have same results
+        print tie!
+        if player name is first player and other name is third player
+            call first vs third
+        elif player name is first and other name is second
+            call first vs second
+        else:
+            call second vs third
+
+call the function for the game
