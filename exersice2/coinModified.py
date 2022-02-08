@@ -2,7 +2,7 @@
 # Source:       Tony Gaddis: Starting out with Python, fourth edition
 # Modified by:  Sanna Maatta & Anne Jumppanen
 # Modified further by: Sarianna Junnila
-# Description:  Coin object and tossing. Added new options for the possible result.
+# Description:  Coin object and tossing. Added new options for the possible value.
 
 import random
 

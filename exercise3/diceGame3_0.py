@@ -8,25 +8,25 @@ import random
 
 class Dice:
     def __init__(self):
-        self.result = 1
+        self.value = 1
         self.color = 'Red'
 
-# Method for get the result randomly 
+# Method for get the value randomly 
 
     def roll_the_dice(self):
         
         if random.randint(0,6) == 0:
-            self.result = 1
+            self.value = 1
         elif random.randint(0,6) == 1:
-            self.result = 2
+            self.value = 2
         elif random.randint(0,6) == 2:
-            self.result = 3
+            self.value = 3
         elif random.randint(0,6) == 3:
-            self.result = 4
+            self.value = 4
         elif random.randint(0,6) == 4:
-            self.result = 5
+            self.value = 5
         else:
-            self.result = 6
+            self.value = 6
     
 # Method for getting a color for the dice randomly 
 
@@ -36,10 +36,10 @@ class Dice:
         else:
             self.color = "Blue"
 
-# Methods for getting the result and the color of the dice
+# Methods for getting the value and the color of the dice
 
-    def get_result(self):
-        return self.result
+    def get_value(self):
+        return self.value
     
     def get_color(self):
         return self.color
@@ -54,7 +54,7 @@ def first_player():
     first_player.roll_the_dice()
     first_player.color_of_the_dice()
     dice_color = first_player.get_color()
-    first_player_res = int(first_player.get_result())
+    first_player_res = int(first_player.get_value())
     return first_player_res, dice_color
 
 def second_player():
@@ -63,7 +63,7 @@ def second_player():
     second_player.roll_the_dice()
     second_player.color_of_the_dice()
     dice_color = second_player.get_color()
-    second_player_res = int(second_player.get_result())
+    second_player_res = int(second_player.get_value())
     return second_player_res, dice_color
 
     
@@ -73,7 +73,7 @@ def third_player():
     third_player.roll_the_dice()
     third_player.color_of_the_dice()
     dice_color = third_player.get_color()
-    third_player_res = int(third_player.get_result())
+    third_player_res = int(third_player.get_value())
     return third_player_res, dice_color
 
 

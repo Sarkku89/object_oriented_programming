@@ -2,23 +2,23 @@ import random
 
 class Dice:
     def initializing the attributes of the class:
-        self.result = giving a value for result
+        self.value = giving a value for value
         self.color = 'giving a string value for color
         self.flashing_light = giving Boolean value for flashing_light
 
     def function for rolling the dice
         
         if random radiant between 0-6 is 0:
-            result is 1
+            value is 1
             color is Red
         elif if radint is 1:
-            result is 2
+            value is 2
             color is Blue
             .
         --- all the dice's sides according to randint as elifs----
             .
         else:
-            last result and color
+            last value and color
 
             
     def function for generating is the dice flashing or not
@@ -29,8 +29,8 @@ class Dice:
             flashing_light is False
 
 
-    def accessor method for getting the result
-        return result
+    def accessor method for getting the value
+        return value
     
     def same for the color
 
@@ -47,7 +47,7 @@ def main function to call the class:
     print "Rolling" etc.
     call the rolling dice function with this object
     call the flashing light function with this object
-    print the result and color with calling the accessor methods with this object
+    print the value and color with calling the accessor methods with this object
     print the flashing light text with 
     
     

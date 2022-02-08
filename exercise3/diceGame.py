@@ -12,27 +12,27 @@ import random
 
 class Dice:
     def __init__(self):
-        self.result = 1
+        self.value = 1
 
     def roll_the_dice(self):
         
         if random.randint(0,6) == 0:
-            self.result = 1
+            self.value = 1
         elif random.randint(0,6) == 1:
-            self.result = 2
+            self.value = 2
         elif random.randint(0,6) == 2:
-            self.result = 3
+            self.value = 3
         elif random.randint(0,6) == 3:
-            self.result = 4
+            self.value = 4
         elif random.randint(0,6) == 4:
-            self.result = 5
+            self.value = 5
         else:
-            self.result = 6
+            self.value = 6
 
-# Accessor method for the result
+# Accessor method for the value
 #       
-    def get_result(self):
-        return self.result
+    def get_value(self):
+        return self.value
 
     
 # ---- Three player objects ----
@@ -41,19 +41,19 @@ def first_player():
 
     first_player = Dice()
     first_player.roll_the_dice()
-    return first_player.get_result()
+    return first_player.get_value()
     
 def second_player():
 
     second_player = Dice()
     second_player.roll_the_dice()
-    return second_player.get_result()
+    return second_player.get_value()
     
 def third_player():
 
     third_player = Dice()
     third_player.roll_the_dice()
-    return third_player.get_result()
+    return third_player.get_value()
 
 
 # ---- The game function ----

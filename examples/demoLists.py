@@ -8,9 +8,10 @@ import random
 
 class Dice:
     def __init__(self):
-        self.value = 1
-        self.color = 'Red'
-        self.flashing_light = True
+        self.value = 0
+    
+    def __str__(self):
+    return str(self.get_value())
 
 # Generating the value and color randomly
     def roll_the_dice(self):

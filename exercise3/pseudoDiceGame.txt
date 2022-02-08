@@ -2,47 +2,47 @@ import random
 
 class Dice:
     def initializing the attributes of the class:
-        self.result = giving a value for result
+        self.value = giving a value for value
 
     def function for rolling the dice
         
         if random radiant between 0-6 is 0:
-            result is 1
+            value is 1
         elif if radint is 1:
-            result is 2
+            value is 2
             .
         --- all the dice's sides according to randint as elifs----
             .
         else:
-            last result
+            last value
 
 
-    def accessor method for getting the result
-        return result
+    def accessor method for getting the value
+        return value
 
 
 def first player instance
 
     assigning class Dice to the object
     call the rolling dice function with this object
-    print the result with calling the accessor methods with this object
+    print the value with calling the accessor methods with this object
     
 ... the same for player 2 and 3
     
     
 def the actual game function
-    assigning the first player result by calling the firsta player instance
+    assigning the first player value by calling the firsta player instance
     same for two
     same for three
-    print the result for first player
+    print the value for first player
     same for two
     same for three
 
-    if first and second player result is bigger than third:
+    if first and second player value is bigger than third:
         print the situation
         call for function "first vs second"
 
-    elif first and third player result are bigger than second:
+    elif first and third player value are bigger than second:
         print the situation
         call for function "first vs third"
 
@@ -89,13 +89,13 @@ def same for second vs third player
 
 
 def function for the second round
-    print player name and result
-    print player name and result
+    print player name and value
+    print player name and value
     if player is bigger than the other player
         print the Winner name
     elif player is smaller than the other player
         print the Winner name
-    elif players have same results
+    elif players have same values
         print tie!
         if player name is first player and other name is third player
             call first vs third
