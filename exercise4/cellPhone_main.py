@@ -3,7 +3,7 @@
 import cellPhone2
    
 def main():
-    my_cell_phone = cellPhone2.cellPhone(
+    my_cell_phone = cellPhone2.CellPhone(
     manufact = input("Enter the manufacturer: "),
     model = input ("Enter the model number: "),
     retail_price = float(input("Enter the retail price:")))

@@ -5,7 +5,7 @@
 
 # Class definition
 
-class cellPhone:
+class CellPhone:
     def __init__(self, manufact, model, retail_price):
         self.manufact = manufact
         self.model = model
