@@ -1,9 +1,9 @@
-"""8. Create a car object. It has the following data attributes: make, model, mileage, price, 
-color, maximum load limit, size of trunk. Make them private. Write accessor and 
-mutator methods to change them. Add __str__ method to print the state of the car.
-"""
+# File:   carClass.py
+# Author: Sarianna Junnila
+# Description:  Defining Car class. Accessor, mutators and str method updated.
+
 # Class definition
-class Carr:
+class Car:
     def __init__(self,make, model, mileage, price, color, maximum_load,trunk_size):
         self.make = make
         self.model = model
