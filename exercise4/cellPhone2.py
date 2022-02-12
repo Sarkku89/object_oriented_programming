@@ -1,6 +1,6 @@
 # File:   cellPhone2.py
 # Author: Sarianna Junnila
-# Description:  Takes user's input of phone's features as set them as 
+# Description:  Takes user's input of phone's features as set them as
 #   attributes and then gets the information and outputs it to the user.
 
 # Class definition
@@ -15,8 +15,8 @@ class CellPhone:
 # Str method
 
     def __str__(self):
-        return str("\nPhone data:\n"+"Manufactor: "+ self.get_manufact()+ "\nModel: "+ self.get_model()+ "\nRetail price: " + self.get_retail_price()+ "\nID: " + self.get_id())
-        
+        return str("\nPhone data:\n"+"Manufacturer: " + self.get_manufact() + "\nModel: " + self.get_model() + "\nRetail price: " + self.get_retail_price() + "\nID: " + self.get_id())
+
 # Mutator methods
 
     def set_manufact(self, manufact):
@@ -29,7 +29,7 @@ class CellPhone:
         self.retail_price = retail_price
 
     def set_id(self, id):
-        self.id = id 
+        self.id = id
 
 # Accessor methods
     def get_manufact(self):
@@ -43,10 +43,3 @@ class CellPhone:
 
     def get_id(self):
         return str(self.id)
-
-
-
-
-  
-
-        

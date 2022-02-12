@@ -38,10 +38,11 @@ def main():
 
     while i <= 5:
         id += 1
-        manufact = manufacturors[i]
-        model = models[i]
-        retail_price = retail_prices[i]
-        phone = cellPhone2.CellPhone(manufact, model, retail_price, id)
+        phone = cellPhone2.CellPhone(manufact, model, retail_price, id)     
+        phone.set_id(id)
+        phone.set_manufact(manufacturors[i])
+        phone.set_model(models[i])
+        phone.set_retail_price(retail_prices[i])
         make_list(phone)
         i += 1
 
