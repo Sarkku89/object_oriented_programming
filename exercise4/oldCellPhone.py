@@ -30,12 +30,3 @@ class CellPhone:
 
     def get_retail_price(self):
         return str(self.retail_price)
-
-
-
-
-
-
-  
-
-        
