@@ -18,8 +18,8 @@ def display_list(a_list):
 def make_list():
     dice_list = []
     for count in range(1,5):
-        new_dice= dice.Dice()
-        dice_list.append(new_list)
+        new_phone= dice.Dice()
+        dice_list.append(new_phone)
     return dice_list
 
 main()
