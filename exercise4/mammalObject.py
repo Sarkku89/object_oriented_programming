@@ -20,7 +20,7 @@ class Mammal:
 # Mutator methods 
 
     def set_id(self,id):
-        self.id = id
+        self.id = str(id)
 
     def set_species(self,species):
         self.species = species
@@ -29,10 +29,10 @@ class Mammal:
         self.name = name
     
     def set_size(self,size):
-        self.size = size
+        self.size = str(size)
     
     def set_weight(self,weight):
-        self.weight = weight
+        self.weight = str(weight)
 
 # Asseccor methods
 

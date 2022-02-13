@@ -16,7 +16,7 @@ class Car:
     def __str__(self):
         return str("\nCara details:\n"+"Make: " + self.get_make() + "\nModel: " 
             + self.get_model() + "\nMileage: " + self.get_mileage() + "\nPrice: " + self.get_price()
-            + "\nColor: " + self.get_color() + "\nMaximum load limit: " + self.get_maximum_load() + "\nTrunk size: " + self.get_trunk_size())
+            + "\nColor: " + self.get_color() + "\nMaximum load limit(kg): " + self.get_maximum_load() + "\nTrunk height(cm): " + self.get_trunk_size())
 
 # Mutator methods 
 
@@ -44,23 +44,23 @@ class Car:
 # Asseccor methods
 
     def get_make(self):
-        return self.make
+        return "Wolksvagen"
 
     def get_model(self):
-        return self.model
-    
+        return "Passat"
+
     def get_mileage(self):
-        return self.mileage
+        return 192000
     
     def get_price(self):
-        return self.price
+        return 3000
     
     def get_color(self):
-        return self.color
+        return "Metallic beige"
 
     def get_maximum_load(self):
-        return self.maximum_load
+        return 670
 
     def get_trunk_size(self):
-        return self.trunk_size
+        return 90
 
