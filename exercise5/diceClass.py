@@ -1,7 +1,6 @@
 # File:   dice_class.py
 # Author: Sarianna Junnila
-# Description:  The class for the dice to get the 
-#   phone according to the number and phone's ID.
+# Description:  The Dice claas for the dices game.
 
 import random
 
