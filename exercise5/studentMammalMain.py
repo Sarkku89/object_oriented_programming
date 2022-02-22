@@ -1,23 +1,16 @@
 # File:   studentMammalMain.py
 # Author: Sarianna Junnila
-# Description: Main function creates the class intances and printing 
-#   function display the information from a dictionary.
+# Description: The studen throws the dice twice. 
+#   The results are summed and compared to animal weight and the results is printed
 
 import mammalObject
 import studenClass
 import diceClass
 
-# Defining a funtion which prints out the student's name and animal's details 
-
-
-def printing_info(dictionary):
-    for key in dictionary:
-        print("Student", key, "has a", dictionary[key])
-
 # Defining the main function
 
-
 def main():
+
     # Creating the Mammal and student instances
 
     mammal = mammalObject.Mammal(id = 1, species = "Dog", name ="Blackie", size =60, weight = 15)
@@ -25,21 +18,28 @@ def main():
         first_name = "Tamara",
         last_name = "Jones",
         student_id = 1)
+
     print("\n")
+
+    # Creating intance of the Dice class
+
     new_dice= diceClass.Dice()
     sum = 0
+
+    # The dice is thrown twice
+
     for count in range(0,2):  
         result = new_dice.roll_dice(6)
         print("In the",count+1,"round the dice side is:", new_dice.get_value())
         sum = sum + new_dice.get_value()
+
+    # The sum of two throws is compared to animals
     mammal.mammalLottery(sum)
+
+    # Printing the result
     print ("\n",student,"'s total result is'", sum, ". The animal seleceter is", mammal)
 
-
-
 # Calling the main function
-
-main()
 
 """import diceClass5.Create a class called Student and use the following data attributes:
 first name, last name and student id. Remember to code accessor 
@@ -50,10 +50,15 @@ each student and their mammal’s information.
 Use informative and clear output print.
 6.Let the student select his/her pet mammal by rolling 2 dices 
 and using their sum to indicate a correct mammal. The higher the number, 
-the heavier mammal you get as your pet. (2 points)
+the heavier mammal you get as your pet. (2 points)"""
 
+def printing_dict(dictionary):
+    for key in dictionary:
+        print("Student", key, "has a", dictionary[key])
 
- mammal = mammalObject.Mammal(
+def dictionary_stuff():
+
+    mammal = mammalObject.Mammal(
         id="1",
         species="Dog",
         name="Blackie",
@@ -89,4 +94,6 @@ the heavier mammal you get as your pet. (2 points)
 
     # Calling the printing function
 
-    printing_info(dictionary)"""
+    printing_dict(dictionary)
+print("\n")   
+dictionary_stuff()

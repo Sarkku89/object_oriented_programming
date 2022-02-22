@@ -21,10 +21,11 @@ def main():
         player2.id : dice2.get_value(),
         player3.id : dice3.get_value()
     }
-
+    print("\n")
     print (player1, "rolled", players[player1.id])
     print (player2, "rolled", players[player2.id])
     print (player3, "rolled", players[player3.id])
+    print("\n")
     
 
 main()

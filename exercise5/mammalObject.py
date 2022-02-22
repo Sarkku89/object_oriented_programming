@@ -1,8 +1,6 @@
-"""Create a mammal object. It has the following data attributes: ID, species, name, size and
-weight. Roll the dice, based on the result check if the correct mammal (based on ID) fits
-into your car’s trunk (that you created in previous task). Also check that your mammal 
-does not exceed the car’s load limit. Give informative output prints and error 
-messages."""
+# File:  mammalObjet.py
+# Author: Sarianna Junnila
+# Description:  The class for defining the mammals
 
 class Mammal:
     def __init__(self, id, species, name, size, weight):
@@ -80,7 +78,7 @@ class Mammal:
             self.set_species("Horse")
             self.set_name("Beauty")
             self.set_size(200)
-            self.set_weight(55)
+            self.set_weight(550)
         elif dice_result > 10 and dice_result <= 12:
             self.set_id (6)
             self.set_species("Giraffe")
