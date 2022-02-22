@@ -1,6 +1,6 @@
 # File:   studentClass.py
 # Author: Sarianna Junnila
-# Description:  The Dice claas for the dices game.
+# Description:  The class for students
 
 import random
 
@@ -40,28 +40,6 @@ class Student:
     def showStudent(self):
         print("Student name:", self.first_name, self.last_name)
 
-    # Roll the dice function to determine the number given by the dice
 
 
-# Dice class definition
 
-class Dice:
-    def __init__(self):
-        self.value = 0
-
-    def __str__(self):
-        return str(self.get_value())
-
-# Roll the dice function to determine the number given by the dice
-
-    def roll_dice(self,maximum):
-        self.set_value(random.randint(1, maximum))
-
-# Mutator method for the value
-    def set_value(self, value):
-        self.value = value
-
-# Accessor method for the value
-
-    def get_value(self):
-        return self.value
