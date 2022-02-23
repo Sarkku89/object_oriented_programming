@@ -1,6 +1,6 @@
 # File:   playerClass.py
 # Author: Sarianna Junnila
-# Description:  The Dice claas for the dices game.
+# Description:  Player class for the dice game.
 
 import random
 
