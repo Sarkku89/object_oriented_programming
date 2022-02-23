@@ -37,7 +37,7 @@ def main():
     mammal.mammalLottery(sum)
 
     # Printing the result
-    print ("\n",student,"'s total result is'", sum, ". The animal seleceter is", mammal)
+    print ("\n",student,"'s total result is'", sum, ". The animal selected is", mammal)
 
 # Calling the main function
 
@@ -96,4 +96,4 @@ def dictionary_stuff():
 
     printing_dict(dictionary)
 print("\n")   
-dictionary_stuff()
+main()

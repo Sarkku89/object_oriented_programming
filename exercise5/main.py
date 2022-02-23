@@ -5,6 +5,44 @@
 import card
 import deck
 
+
+def main():
+    
+    print("Let's test that a single card works...")
+    
+    my_card = card.Card("Hearts", 12)
+    my_card.show_card()
+    print(my_card)
+
+    print("Single card testing is over.\n")
+
+    print("Let's test that a deck of card is created...")
+
+    my_deck = deck.Deck()
+    
+    my_deck.show_deck()
+
+    print("Card deck testing is over.\n")
+
+    print("Let's shuffle the deck.")
+    my_deck.suffle_deck()
+
+    print("Let's test that a deck of card is shuffled...")
+
+    my_deck.show_deck()
+
+    print("Cards should be suffled now.\n")
+
+    print("Let's draw 2 cards and show them.")
+    print("You draw:")
+    card1 = my_deck.draw_card()
+    card1.show_card()
+    print("Your opponent draw:")
+    card1 = my_deck.draw_card()
+    card1.show_card()
+ 
+    # Code your Exercise 5 taks 7 game here. """
+
 # Defining the card game function
 
 def highest_value_wins(cards_drawn):
@@ -43,43 +81,6 @@ def highest_value_wins(cards_drawn):
 
 #Calling the game
 highest_value_wins(4)
-
-"""def main():
-    
-    print("Let's test that a single card works...")
-    
-    my_card = card.Card("Hearts", 12)
-    my_card.show_card()
-    print(my_card)
-
-    print("Single card testing is over.\n")
-
-    print("Let's test that a deck of card is created...")
-
-    my_deck = deck.Deck()
-    
-    my_deck.show_deck()
-
-    print("Card deck testing is over.\n")
-
-    print("Let's shuffle the deck.")
-    my_deck.suffle_deck()
-
-    print("Let's test that a deck of card is shuffled...")
-
-    my_deck.show_deck()
-
-    print("Cards should be suffled now.\n")
-
-    print("Let's draw 2 cards and show them.")
-    print("You draw:")
-    card1 = my_deck.draw_card()
-    card1.show_card()
-    print("Your opponent draw:")
-    card1 = my_deck.draw_card()
-    card1.show_card()
- 
-    # Code your Exercise 5 taks 7 game here. """
 
 
 
