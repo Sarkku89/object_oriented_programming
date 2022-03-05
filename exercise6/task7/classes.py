@@ -1,18 +1,15 @@
-# File:  classes.py
-# Author: Sarianna Junnila
-# Description:  Classes for Participants of Object Oriented Class, 
-#   subclasses for Students and Teachers
+"""Inherit a student and teacher from a participant of OOP course. Think of a few proper
+data attributes that are
+a. common for both teachers and students and
+b. different between teachers and students. """
 
-# OOPParitcipants class definition
 class OopParticipants:
-    def __init__(self, start_month, end_month, year, prog_lang, name, wild, domestic):
+    def __init__(self, start_month, end_month, year, prog_lang, name):
         self.start_month = start_month
         self.end_month = end_month
         self.year = year
         self.prog_lang = prog_lang
         self.name = name
-        self.wild = wild
-        self.domestic = domestic
 
 # Mutator methods 
     def set_start_month(self, start_month):
@@ -25,10 +22,7 @@ class OopParticipants:
         self.prog_lang = prog_lang
     def set_name(self, name):
         self.name = name
-    def set_wild(self,wild):
-        self.wild = wild
-    def set_domestic(self, domestic):
-        self.domestic = domestic
+
 
 # Asseccor methods
     def get_start_month(self):
@@ -41,10 +35,7 @@ class OopParticipants:
         return self.prog_lang
     def get_name(self):
         return self.name
-    def get_wild(self):
-        return self.wild
-    def get_domestic(self):
-        return self.domestic
+
 
 # Str method for clear outputs when printing the object
     def __str__(self):
@@ -52,13 +43,14 @@ class OopParticipants:
             + self.get_start_month() + " and " 
             + self.get_end_month() + str(self.get_year))
 
+
 #___________________________________________________
 
 # Stundent subclass definition
 
 class Student(OopParticipants):
-    def __init__(self, start_month, end_month, year, prog_lang, name, wild, domestic, student_id, grade):
-        OopParticipants.__init__(self,start_month, end_month, year, prog_lang, name, wild, domestic)
+    def __init__(self, start_month, end_month, year, prog_lang, name, student_id, grade):
+        OopParticipants.__init__(self,start_month, end_month, year, prog_lang, name)
 
         self.student_id = student_id
         self.grade = grade
@@ -81,17 +73,16 @@ class Student(OopParticipants):
             + " took part into a OOP course between " + self.get_start_month() 
             + " and " + self.get_end_month() + " " +str(self.get_year()) + ".\n"
             + "On the course he/she used " + self.get_prog_lang()
-            + " to program. His/Her grade was " + str(self.get_grade())
-            + ". She/he owns a " + self.get_domestic() 
-            + " and is a benefactor for a " + self.get_wild())
+            + " to program. His/Her grade was " + str(self.get_grade()))
+
 
 #___________________________________________________
 
 # Teacher subclass definition
 
 class Teacher(OopParticipants):
-    def __init__(self, start_month, end_month, year, prog_lang, name, wild, domestic, number_of_students, number_of_courses):
-        OopParticipants.__init__(self, start_month, end_month, year, prog_lang, name, wild, domestic)
+    def __init__(self, start_month, end_month, year, prog_lang, name, number_of_students, number_of_courses):
+        OopParticipants.__init__(self, start_month, end_month, year, prog_lang, name)
 
         self.number_of_students = number_of_students
         self.number_of_courses = number_of_courses
@@ -115,6 +106,4 @@ class Teacher(OopParticipants):
         + " courses and " + str(self.get_number_of_students())
         + " students.\nOne of the courses is OOP course with " + self.get_prog_lang()
         + "." + "It started " + self.get_start_month() 
-        + " and it ends in " + self.get_end_month()+ " " + str(self.get_year() )
-        + ". She/he owns a " + self.get_domestic() 
-        + " and is a benefactor for a " + self.get_wild())
+        + " and it ends in " + self.get_end_month()+ " " + str(self.get_year())) 
