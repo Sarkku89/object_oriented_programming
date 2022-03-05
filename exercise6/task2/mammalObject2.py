@@ -1,19 +1,32 @@
-""" Use the Mammal class (that you created in Exercise 4). 
-Inherit species of animals from it(e.g. Dogs, Cats, etc.). 
-Species of animals mean that you do not inherit an individual
-animal, but the whole species (such as Dogs, Cats or Elephants). 
-The individual animalsare then the individual objects. 
-Add data attribute for the noise the species of animals
-make and the diet they have and the animals name and owner. 
-Create a few objects (=individual animals) from the inherited 
-species and display them on screen (= Print outthe state of each object 
-(use str-method))."""
+# File:  mammalObjet.py
+# Author: Sarianna Junnila
+# Description:  The class for defining the mammals
 
-import mammalObject2
+class Mammal:
+    def __init__(self, species):
 
-class Cats(mammalObject2.Mammal):
+        self.species = species
+    
+    def __str__(self):
+        return str(self.get_species())
+
+# Mutator methods 
+
+    def set_species(self,species):
+        self.species = species
+    
+
+# Asseccor methods
+
+    def get_species(self):
+        return self.species
+
+
+
+
+class Cats(Mammal):
     def __init__(self, noise, diet, owner, species, name):
-        mammalObject2.Mammal.__init__(self,species)
+        Mammal.__init__(self,species)
         self.noise = noise
         self.diet = diet
         self.owner = owner
@@ -27,8 +40,6 @@ class Cats(mammalObject2.Mammal):
         self.diet = diet
     def set_owner(self, owner):
         self.owner = owner
-    def set_noise(self,noise):
-        self.noise = noise
     def set_name(self, name):
         self.name = name
 
@@ -41,8 +52,6 @@ class Cats(mammalObject2.Mammal):
         return self.owner
     def get_noise(self):
         return self.noise
-    def get_name(self):
-        return self.name
 
 
     def __str__(self):
@@ -53,9 +62,10 @@ class Cats(mammalObject2.Mammal):
         + self.get_noise()+" noises.")
 
 
-class Dogs(mammalObject2.Mammal):
+
+class Dogs(Mammal):
     def __init__(self, noise, diet, owner, species, name):
-        mammalObject2.Mammal.__init__(self,species)
+        Mammal.__init__(self,species)
         self.noise = noise
         self.diet = diet
         self.owner = owner
@@ -69,8 +79,6 @@ class Dogs(mammalObject2.Mammal):
         self.diet = diet
     def set_owner(self, owner):
         self.owner = owner
-    def set_noise(self,noise):
-        self.noise = noise
     def set_name(self, name):
         self.name = name
 
@@ -83,8 +91,7 @@ class Dogs(mammalObject2.Mammal):
         return self.owner
     def get_noise(self):
         return self.noise
-    def get_name(self):
-        return self.name
+
 
 
     def __str__(self):
