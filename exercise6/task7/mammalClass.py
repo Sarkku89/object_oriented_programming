@@ -152,35 +152,29 @@ class Dogs(DomesticAnimal):
 # Subclass Giraffes definition
 
 class Giraffes(WildAnimal):
-    def __init__(self, species, when_active, continent, height, weight, benefactor):
+    def __init__(self, species, when_active, continent, height, weight):
         WildAnimal.__init__(self,species, when_active, continent)
         self.height = height
-        self.weight = weight
-        self.benefactor = benefactor
+        self.weight = weight 
 
 # Mutator methods 
     def set_height(self, height):
         self.height = height
     def set_weight(self, weight):
         self.weight = weight
-    def set_benefactor(self, benefactor):
-        self.benefactor = benefactor
 
 # Asseccor methods
     def get_height(self):
         return self.height
     def get_weight(self):
         return self.weight
-    def get_benefactor(self):
-        return self.benefactor
 
 # Str method for clear outputs when printing the object
     def __str__(self):
         return str(self.get_species() + " is a "+ self.get_when_active() 
         +" wild animal and it lives in "+ self.get_continent() 
         + ". It weights " + str(self.get_weight())
-        +" kg and it is " + str(self.get_height())+" cm high."
-        + " This animal's benefactor is " + str(self.get_benefactor()))
+        +" kg and it is " + str(self.get_height())+" cm high.")
 
 
 # _______________________________________________________
@@ -188,32 +182,28 @@ class Giraffes(WildAnimal):
 # Subclass Bears definition
 
 class Bears(WildAnimal):
-    def __init__(self, species, when_active, continent, height, weight, benefactor):
+    def __init__(self, species, when_active, continent, height, weight):
         WildAnimal.__init__(self,species, when_active, continent)
         self.height = height
         self.weight = weight
-        self.benefactor = benefactor
 
 # Mutator methods 
     def set_height(self, height):
         self.height = height
     def set_weight(self, weight):
         self.weight = weight
-    def set_benefactor(self, benefactor):
-        self.benefactor = benefactor
+
 
 # Asseccor methods
     def get_height(self):
         return self.height
     def get_weight(self):
         return self.weight
-    def get_benefactor(self):
-        return self.benefactor
+
 
 # Str method for clear outputs when printing the object
     def __str__(self):
         return str(self.get_species() + " is a "+ self.get_when_active() 
         +" wild animal and it lives in "+ self.get_continent() 
         + ". It weights " + str(self.get_weight())
-        +" kg and it is " + str(self.get_height())+" cm high."
-        + " This animal's benefactor is " + str(self.get_benefactor()))
+        +" kg and it is " + str(self.get_height())+" cm high.")
