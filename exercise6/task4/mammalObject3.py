@@ -7,9 +7,9 @@
 
 class Mammal:
     def __init__(self, species):
-
         self.species = species
-    
+
+# Str method
     def __str__(self):
         return str("Mammal's species is" + self.get_species())
 
@@ -17,15 +17,13 @@ class Mammal:
     def set_species(self,species):
         self.species = species
     
-
 # Asseccor methods
     def get_species(self):
         return self.species
 
-
 # _______________________________________________________
 
-# Subclass WildAnimal definition
+# Subclass WildAnimal definitionD
 
 class WildAnimal(Mammal):
     def __init__(self, species, when_active, continent):
@@ -51,7 +49,6 @@ class WildAnimal(Mammal):
             + " lives in " + self.get_continent() 
             + " and it's a " + self.get_when_active() 
             + " animal.")
-
 
 # _______________________________________________________
 
@@ -81,7 +78,6 @@ class DomesticAnimal(Mammal):
         return str("Domestic animal " + self.get_species() 
             + " is owned by "  + self.get_owner() 
             + " and it's name is "  + self.get_name())
-
 
 # _______________________________________________________
 
@@ -146,7 +142,6 @@ class Dogs(DomesticAnimal):
         + self.get_noise()+" noises. "
         + self.get_species() + " is a domestic animal.")
 
-
 # _______________________________________________________
 
 # Subclass Giraffes definition
@@ -175,7 +170,6 @@ class Giraffes(WildAnimal):
         +" wild animal and it lives in "+ self.get_continent() 
         + " It weights " + str(self.get_weight())
         +" kg and it is " + str(self.get_height())+" cm high.")
-
 
 # _______________________________________________________
 
