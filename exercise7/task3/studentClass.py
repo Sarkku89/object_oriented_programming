@@ -2,10 +2,9 @@
 # Author: Sarianna Junnila
 # Description:  The class for students
 
-import random
 import petClass
 
-# Dice class definition
+#  Student class definition
 
 class Student:
     def __init__(self, first_name, last_name, has_a_pet):
@@ -15,9 +14,9 @@ class Student:
 
     def __str__(self):
         if self.has_a_pet == True:
-            return str(self.get_first_name() + " " + self.get_last_name() + " has a " + petClass.Pets.get_species())
+            return str(self.get_first_name() +  self.get_last_name())
         else:
-            return str(self.get_first_name() + " " + self.get_last_name())
+            return str(self.get_first_name() +  self.get_last_name())
 
 # Mutator method for the value
     def set_first_name(self, first_name):
@@ -37,11 +36,11 @@ class Student:
     def get_last_name(self):
         return self.last_name 
 
-    def get_id(self):
+    def get_has_a_pet(self, pet):
         if self.has_a_pet == True:
-            return ("Student has a " + petClass.Pets.get_species())
+            return (self.get_first_name() + "has a " + petClass.Pets.get_species(pet))
         else:
-            return ("Student hasn't pets.")
+            return (self.get_first_name() +"hasn't any pets.")
 
 
 

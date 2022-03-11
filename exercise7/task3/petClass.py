@@ -1,9 +1,8 @@
-# File:  mammalObjet2.py
+# File:  petClass.py
 # Author: Sarianna Junnila
-# Description:  The class for defining the 
-#   mammals and the subclasses Cats and Dogs
+# Description:  Definitions for Animal and Pets classes
 
-# Mammal class definiton
+# Animal class definiton
 class Animal:
     def __init__(self, species):
 
@@ -22,7 +21,7 @@ class Animal:
         return self.species
 #_________________________________________________________
 
-# Cats subclass definition
+# Pets subclass definition
 class Pets(Animal):
     def __init__(self, owner, species, name):
         Animal.__init__(self,species)
@@ -46,5 +45,5 @@ class Pets(Animal):
     def __str__(self):
         return str(self.get_species() + " "
         + self.get_name() + " is owned by "
-        + self.get_owner() + " and it eats ")
+        + str(self.get_owner()))
 
