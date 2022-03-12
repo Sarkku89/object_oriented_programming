@@ -11,7 +11,7 @@ import random
 def make_dictionary():
     a_dictionary = {}
     try:
-        a_file = open("C:\\Users\\Sarkku\\Documents\\GitHub\\object_oriented_programming\\exercise7\\task7\\countries.txt")
+        a_file = open("C:\\Users\\Sarkku\\Documents\\GitHub\\object_oriented_programming\\exercise7\\task6\\countries.txt")
         for line in a_file:
             key, value = line.split()
             a_dictionary[key] = value
