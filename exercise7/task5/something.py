@@ -1,13 +1,7 @@
-"""5. Code the relationship you just drew in the class diagram. Then check if the pet fits into
-your car or do you need a truck or a trailer. Give informative output prints. See which
-pet-related methods are in the Student class and think which car related methods you
-need to add to the Student class. (2 points)
-"""
-# File:   cellPhone_main.py
+# File:   something.py
 # Author: Sarianna Junnila
-# Description:  The program rolls a dice and according to the result 
-#   picks the correct animal and checks, if it can be fit into the car.
-
+# Description:  Creating instances for all the classes, 
+#   then comparing if the animals fits into the students' cars
 
 # Importing the cellPhone2 and diceClass
 
@@ -17,6 +11,7 @@ import studentClass
 
 # Definition of the main function
 
+
 def animal():
     animal_list = []
     student1 = studentClass.Student("Einari", "Virta", True, True)
@@ -25,19 +20,36 @@ def animal():
     pet1 = petClass.Pets("Cat", 45, 5, student1.get_first_name()+student1.get_last_name(), "Kitty")
     pet2 = petClass.Pets("Donkey", 150, 150, student2.get_first_name()+student2.get_last_name(), "George")
     pet3 = petClass.Pets("Horse", 200, 550, student3.get_first_name()+student3.get_last_name(), "Beauty")
-    car1= carClass.Car("Wolksvagen", "Passat",192000, 3000, "Metallic beige", 670, 90, student1.get_first_name()+student1.get_last_name())
-    car2 = carClass.Car("Volvo", "V70", 180000, 2500, "Blue", 500, 85, student2.get_first_name()+student1.get_last_name())
-    car3 = carClass.Car("Fiat", "Punto", 80000, 2000, "Light green", 430, 70, student3.get_first_name()+student1.get_last_name())
+    car1 = carClass.Car("Wolksvagen", "Passat", 192000, 3000, "Metallic beige",
+                        670, 90, student1.get_first_name()+student1.get_last_name())
+    car2 = carClass.Car("Volvo", "V70", 180000, 2500, "Blue", 500,
+                        85, student2.get_first_name()+student2.get_last_name())
+    car3 = carClass.Car("Fiat", "Punto", 80000, 2000, "Light green",
+                        430, 70, student3.get_first_name()+student3.get_last_name())
 
-    animal_list= [pet1, pet2, pet3]
+    animal_list = [pet1, pet2, pet3]
     car_list = [car1, car2, car3]
-    student_list = [student1, student2, student3]
+    for c in car_list:
 
+        for a in animal_list:
+            if c.get_owner() == a.get_owner():
+                if a.get_size() > c.get_trunk_size() or a.get_weight() > c.get_maximum_load():
+                    if a.get_size() > c.get_trunk_size() and a.get_weight() > c.get_maximum_load():
+                        print("Sorry,", a.get_owner()+",  pet", a.get_species(), a.get_name(
+                        ), "is too heavy and too tall for this", c.get_make(), c.get_model())
 
+                    elif a.get_size() > c.get_trunk_size():
+                        print("Sorry,", a.get_owner()+", your pet", a.get_species(
+                        ) , a.get_name(), "is too tall for your", c.get_make(), c.get_model())
 
-    print("\n does", student1.get_first_name()+"'s", pet1.get_species(), "fit into his", car1.get_make())
+                    elif a.get_weight() > c.get_maximum_load():
+                        print("Sorry,", a.get_owner()+", your pet", a.get_species(
+                        ), a.get_name(), "is too heavy for your", c.get_make(), c.get_model())
+
+                else:
+                    print(a.get_owner()+", your", a.get_species(),
+                    a.get_name(), "fits in your", c.get_make(), c.get_model())
 
 
 # Calling the main function
 animal()
-
