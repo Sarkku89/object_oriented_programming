@@ -160,7 +160,6 @@ class FlowerShop:
     def set_selection(self, selection):
         self.selection = selection
 
-
 # Asseccor methods
 
     def get_name(self):
@@ -177,9 +176,7 @@ class FlowerShop:
         for i in list:
             print(i)
 
-
 # Str method for clear outputs
-
 
     def __str__(self):
         return str(self.get_name() + "is a flower shop located in "

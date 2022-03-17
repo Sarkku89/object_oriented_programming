@@ -1,3 +1,7 @@
+# File:   pwtClass.py
+# Author: Sarianna Junnila
+# Description:  Defining Animal and Pets classe.
+
 class Animal:
 
     def __init__(self, species, size, weight):
