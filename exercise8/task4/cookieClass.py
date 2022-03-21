@@ -10,7 +10,6 @@ class Cookie:
         self.frozen = frozen
         self.flavour = flavour
 
-
     # Mutator methods
 
     def set_baked(self, baked):
@@ -21,8 +20,6 @@ class Cookie:
 
     def set_flavour(self, flavour):
         self.flavour = flavour
-
-
 
     # Accessor method 
     def get_baked(self):
@@ -40,9 +37,8 @@ class Cookie:
     def get_flavour(self):
         return self.flavour
     
-
-
     # Str method for clear inputs
+    
     def __str__(self):
         if self.get_flavour() == "":
             return str(
